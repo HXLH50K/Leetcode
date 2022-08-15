@@ -40,7 +40,7 @@ class MyCircularDeque:
         return self.q[-1]
 
     def isEmpty(self) -> bool:
-        return bool(self.q)
+        return len(self.q) == 0
 
     def isFull(self) -> bool:
         return len(self.q) == self.k
