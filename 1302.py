@@ -31,4 +31,7 @@ class Solution:
 # %%
 a = Solution()
 root = [1,2,3,4,5,None,6,7,None,None,None,None,8]
+root = build_tree(root)
+a.deepestLeavesSum(root)
 
+# %%
