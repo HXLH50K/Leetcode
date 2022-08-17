@@ -1,6 +1,7 @@
 # Definition for a binary tree node.
 # %%
 from typing import Optional
+from build_tree import build_tree
 # %%
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -16,8 +17,7 @@ class Solution:
         q1 = []
         while q:
             res = 0
-            while q:
-                node = q.pop(0)
+            for node in q:
                 res += node.val
                 if node.left:
                     q1.append(node.left)
@@ -28,3 +28,7 @@ class Solution:
             q = q1
             q1 = []
         return -1
+# %%
+a = Solution()
+root = [1,2,3,4,5,None,6,7,None,None,None,None,8]
+
