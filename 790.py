@@ -1,12 +1,5 @@
 # %%
 class Solution:
-    def f(self, x):
-        if x <= 2:
-            return x
-        if x == 3:
-            return 5
-        return (2 * self.f(x - 1) + self.f(x - 3)) % (10**9 + 7)
-
     def numTilings(self, n: int) -> int:
         res = [0, 1, 2, 5] + [0] * (n - 3)
         for i in range(4, n + 1):
