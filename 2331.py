@@ -13,3 +13,4 @@ class Solution:
             if root.val == 2
             else self.evaluateTree(root.left) and self.evaluateTree(root.right)
         )
+
