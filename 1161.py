@@ -1,4 +1,7 @@
-#%%
+# %%
+from typing import Optional
+
+
 # Definition for a binary tree node.
 class TreeNode:
 
@@ -9,11 +12,9 @@ class TreeNode:
 
 
 class Solution:
-
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
         q = [root]
         res = [root.val]
-        q1 = []
         while q:
             q1 = []
             re = 0
@@ -25,5 +26,6 @@ class Solution:
                     q1.append(x.right)
                     re += x.right.val
             res.append(re)
-            q1, q = q, q1
-        return res.index(max(res))
+            q = q1
+        res.pop()
+        return res.index(max(res)) + 1
